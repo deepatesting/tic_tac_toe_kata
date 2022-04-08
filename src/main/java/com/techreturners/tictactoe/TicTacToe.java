@@ -10,21 +10,14 @@ public class TicTacToe {
 
     public String play(int[][] board){
 
+        if ((board[0][0] == 1) && (board[1][0] == 1) && (board[2][0] == 1))
+        {
+            return "Player 1 wins!";
+        }
 
-        for(int i = 0; i < board.length; i++) {
-            for(int j = 0; j < board.length; j++){
-                if(board[i][j] == 1){
-                    countplayerOne++;
-                    if (countplayerOne==3)
-                        return "Player 1 wins!";
-                }
-                else if(board[i][j] == 2){
-                    countplayerTwo++;
-                    if (countplayerTwo==3)
-                        return "Player 2 wins!";
-                }
-
-            }
+        if ((board[0][1] == 2) && (board[1][1] == 2) && (board[2][1] == 2))
+        {
+            return "Player 2 wins!";
         }
         return null;
     }
